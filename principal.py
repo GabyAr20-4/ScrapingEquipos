@@ -37,8 +37,10 @@ if response.status_code == 200:
     gd  = parsed.xpath(gold)
     puntaje = parsed.xpath(puntos)
 
-    df = pd.DataFrame({'Nombre': equipo, 'PJ': pj, 'PG': pg, 'PP': pp, 'PE': pe, 'GF': gf, 'GC': gc, 'FV': fv, 'CV': cv, 'GD': gd, 'PUNTOS': puntaje}, 
+    df = pd.DataFrame({'NOMBRE': equipo, 'PJ': pj, 'PG': pg, 'PP': pp, 'PE': pe, 'GF': gf, 'GC': gc, 'FV': fv, 'CV': cv, 'GD': gd, 'PUNTOS': puntaje}, 
     columns=['NOMBRE','PJ', 'PG', 'PP', 'PE', 'GF', 'GC', 'FV', 'CV', 'GD', 'PUNTOS'])
+
+
 
     df.to_csv('./tabla.csv')
 
